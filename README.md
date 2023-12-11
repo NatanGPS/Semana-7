@@ -1,6 +1,44 @@
 # Semana-7
 ## Desafio 3: 
-<br> 
+# Configuração da Pipeline no GitLab
+
+Este repositório contém uma configuração básica de pipeline no GitLab que executa um simples comando "echo Hello World". A pipeline é definida no arquivo `.gitlab-ci.yml`.
+
+## Como Usar
+
+Siga os passos abaixo para configurar a pipeline no seu projeto:
+
+### 1. Criar um Novo Repositório no GitLab
+
+1. Vá para o [GitLab](https://gitlab.com/) e faça login na sua conta.
+2. Crie um novo projeto e forneça as informações necessárias.
+
+### 2. Adicionar o Arquivo `.gitlab-ci.yml`
+
+1. No seu projeto no GitLab, crie um arquivo chamado `.gitlab-ci.yml` na raiz do repositório.
+2. Copie e cole o seguinte conteúdo no arquivo:
+
+```yaml
+# .gitlab-ci.yml
+
+stages:
+  - build
+
+hello_world:
+  stage: build
+  script:
+    - echo "Hello World"
+```
+### Adicionar o arquivo .gitlab-ci.yml ao controle de versão
+git add .gitlab-ci.yml
+
+### Fazer um commit
+git commit -m "Adicionar .gitlab-ci.yml"
+
+### Fazer um push para o repositório remoto
+git push origin master
+# Pipeline de CI/CD:
+   - A pipeline será automaticamente acionada no GitLab quando você fizer o push para a branch `main`. Verifique o progresso e os logs na interface web do GitLab em "CI/CD > Pipelines".
 
 
 ## Desafio 4:
